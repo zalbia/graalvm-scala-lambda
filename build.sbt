@@ -1,13 +1,13 @@
 
 name := "graalvm-scala-lambda"
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.5"
 assemblyJarName in assembly := "graalvm-scala-lambda.jar"
 mainClass in assembly := Some("bootstrap")
 
 libraryDependencies ++= Seq(
-  "com.lihaoyi" %% "requests" % "0.1.8",
-  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "0.47.0" % Compile, 
-  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "0.47.0" % Provided // required only in compile-time
+  "com.lihaoyi" %% "requests" % "0.6.5",
+  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.7.2" % Compile, 
+  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.7.2" % Provided // required only in compile-time
 )
 
 scalacOptions ++= Seq(
