@@ -5,5 +5,5 @@ set -e
 
 mkdir -p dist
 sbt clean assembly
-docker build -f linuxbuild.dockerfile -t linuxbuild --build-arg BASE_IMAGE_TAG="java11-21.0.0" .
-docker run --rm -v "$(pwd -P)/target/scala-2.13":/tmp/target -v "$(pwd -P)/dist":/tmp/dist linuxbuild
+docker build -f linuxbuild.dockerfile -t linuxbuild .
+docker run --rm -v "$(pwd -P)/target/scala-2.13":/tmp/target -v "$(pwd -P)/dist":/tmp/dist -v "$(pwd -P)/.graalvm":/tmp/.graalvm linuxbuild

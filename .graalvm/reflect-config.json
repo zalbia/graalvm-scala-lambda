@@ -1,0 +1,15 @@
+[
+  {
+    "name": "java.lang.Class",
+    "methods": [
+      { "name": "getMethods" },
+      { "name": "getDeclaredFields" }
+    ]
+  },
+  {
+    "name": "java.lang.invoke.VarHandle",
+    "methods": [
+      { "name": "releaseFence" }
+    ]
+  }
+]
